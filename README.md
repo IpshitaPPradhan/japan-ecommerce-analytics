@@ -20,33 +20,33 @@ The Japan retail component pulls directly from the e-Stat API, the official port
 
 ## Project Structure
 
-japan-ecommerce-analytics/
-├── notebooks/
-│   ├── 01_cohort_analysis.ipynb
-│   ├── 02_rfm_segmentation.ipynb
-│   ├── 03_clv.ipynb
-│   ├── 04_funnel_analysis.ipynb
-│   ├── 05_market_basket.ipynb
-│   ├── 06_growth_analysis.ipynb
-│   ├── 07_churn_signals.ipynb
-│   ├── 08_pareto_analysis.ipynb
-│   ├── 09_seller_product_ranking.ipynb
-│   ├── 10_logistics_kpis.ipynb
-│   └── 11_japan_retail_estat.ipynb
-├── src/
-│   ├── data_loader.py
-│   └── estat_api.py
-├── dashboard/
-│   ├── app.py
-│   └── pages/
-│       ├── 1_Olist_Brazil.py
-│       └── 2_Japan_Retail.py
-├── data/
-│   └── olist_ecommerce.duckdb
-├── docs/
-│   └── screenshots/
-├── requirements.txt
-└── README.md
+    japan-ecommerce-analytics/
+    ├── notebooks/
+    │   ├── 01_cohort_analysis.ipynb
+    │   ├── 02_rfm_segmentation.ipynb
+    │   ├── 03_clv.ipynb
+    │   ├── 04_funnel_analysis.ipynb
+    │   ├── 05_market_basket.ipynb
+    │   ├── 06_growth_analysis.ipynb
+    │   ├── 07_churn_signals.ipynb
+    │   ├── 08_pareto_analysis.ipynb
+    │   ├── 09_seller_product_ranking.ipynb
+    │   ├── 10_logistics_kpis.ipynb
+    │   └── 11_japan_retail_estat.ipynb
+    ├── src/
+    │   ├── data_loader.py
+    │   └── estat_api.py
+    ├── dashboard/
+    │   ├── app.py
+    │   └── pages/
+    │       ├── 1_Olist_Brazil.py
+    │       └── 2_Japan_Retail.py
+    ├── data/
+    │   └── olist_ecommerce.duckdb
+    ├── docs/
+    │   └── screenshots/
+    ├── requirements.txt
+    └── README.md
 
 ---
 
@@ -131,35 +131,36 @@ macro statistics for richer business context.
 
 ## How to Run Locally
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/IpshitaPPradhan/japan-ecommerce-analytics.git
-cd japan-ecommerce-analytics
+**1. Clone the repository**
 
-# 2. Create virtual environment
-uv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # Mac/Linux
+    git clone https://github.com/IpshitaPPradhan/japan-ecommerce-analytics.git
+    cd japan-ecommerce-analytics
 
-# 3. Install dependencies
-uv pip install -r requirements.txt
+**2. Create virtual environment**
 
-# 4. Set up credentials
-# Create .env file with your Kaggle and e-Stat API keys
-# KAGGLE_USERNAME=your_username
-# KAGGLE_KEY=your_key
-# ESTAT_APP_ID=your_estat_id
+    uv venv
+    venv\Scripts\activate
 
-# 5. Download and load data
-kaggle datasets download -d olistbr/brazilian-ecommerce -p data/raw/
-python src/data_loader.py
-python src/estat_api.py
+**3. Install dependencies**
 
-# 6. Run dashboard
-cd dashboard
-streamlit run app.py
-```
+    uv pip install -r requirements.txt
 
+**4. Set up credentials — create a `.env` file**
+
+    KAGGLE_USERNAME=your_username
+    KAGGLE_KEY=your_key
+    ESTAT_APP_ID=your_estat_id
+
+**5. Download and load data**
+
+    kaggle datasets download -d olistbr/brazilian-ecommerce -p data/raw/
+    python src/data_loader.py
+    python src/estat_api.py
+
+**6. Run dashboard**
+
+    cd dashboard
+    streamlit run app.py
 ---
 
 ## Data Sources
