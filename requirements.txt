@@ -14,3 +14,4 @@ jupyter>=1.0.0
 python-dotenv>=1.0.0
 ucimlrepo>=0.0.7
 lifetimes
+kaleido==0.2.1
